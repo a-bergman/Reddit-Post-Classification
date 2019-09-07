@@ -2,7 +2,7 @@
 
 # Problem Statement
 
-While scraping data from Reddit and intern at Bon Appétit realized that they had accidentally deleted the `subreddit` tag from their data.  As a result, Bon Appétit's marketing team approach us to help them figure out if a post came from [r/Cooking](https://www.reddit.com/r/Cooking/) or [r/AskCulinary]([r/Cooking](https://www.reddit.com/r/AskCulinary/).  The goal of this project is to predict the subject of origin as accurately as possible.
+While scraping data from Reddit and intern at Bon Appétit realized that they had accidentally deleted the `subreddit` tag from their data.  As a result, Bon Appétit's marketing team approach us to help them figure out if a post came from [r/Cooking](https://www.reddit.com/r/Cooking/) or [r/AskCulinary](https://www.reddit.com/r/AskCulinary/).  The goal of this project is to predict the subject of origin as accurately as possible.
 
 -------
 
