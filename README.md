@@ -20,8 +20,16 @@ We will model using four different models: a logistic regression, support vector
 
 # Conclusions & Recommendations
 
-After looking over the metric scores and confusion matrices, we were able to identify our best model as a logistic regression with the TFIDF vectorizer. Despite this model being the "best" model, it is far from being a good model: it had an accuracy of only 68.7%, a balanced accuracy of 66.4%, and an ROC-AUC (area under the curve) score of 0.66419.  Of those three scores, the most important is the ROC-AUC because it represents how distinct the two classes are: since a score of 0.5 is the lowest possible score, our model's score of 0.66419 is very poor.  In addition to the scores being low, the models are overfit but no severely.
+After looking over the metric scores and confusion matrices, we were able to identify our best model as a logistic regression with the TFIDF vectorizer. Despite this model being the "best" model, it is far from being a good model: it had an accuracy of only 68.7%, a balanced accuracy of 66.4%, and an ROC-AUC (area under the curve) score of 0.66419.  Of those three scores, the most important is the ROC-AUC because it represents how distinct the two classes are: since a score of 0.5 is the lowest possible score, our model's score of 0.66419 is very poor.  In addition to the scores being low, the models are overfit
 
-While our models on the whole did a good job at predicting posts from r/Cooking, we cannot recommend that Bon Appétit use our models to predict whether or not a post came from r/Cooking because our best model's scores are not high enough for us to be confident in the model's performance.
+Furthermore because our models did terribly at predicting posts from r/Cooking, we cannot recommend that Bon Appétit use our models to predict whether or not a post came from r/Cooking because our best model's scores are not high enough for us to be confident in the model's performance.
 
 Going forward, we would want to continue preprocessing and try different modeling methods: we want to try different vectorizers and different sets of stop words as well as trying more advanced classification methods such as neural networks.
+
+-----
+
+# Links
+
+The article I wrote about this project can be found [here](https://towardsdatascience.com/reddit-post-classification-b70258d6affe)
+
+The Google Slides can be found [here](https://docs.google.com/presentation/d/1EP89jYtVkRygPdNde-GCYR3Gc9zoFsftPToKB4mwu7Y/edit?usp=sharing)
