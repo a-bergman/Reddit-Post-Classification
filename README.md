@@ -30,6 +30,6 @@ Going forward, we would want to continue preprocessing and try different modelin
 
 # Links
 
-The article I wrote about this project can be found [here](https://towardsdatascience.com/reddit-post-classification-b70258d6affe)
+The Medium artice about this project can be found [here](https://towardsdatascience.com/reddit-post-classification-b70258d6affe).
 
-The Google Slides can be found [here](https://docs.google.com/presentation/d/1EP89jYtVkRygPdNde-GCYR3Gc9zoFsftPToKB4mwu7Y/edit?usp=sharing)
+The Google Slides presentation can be found [here](https://docs.google.com/presentation/d/1EP89jYtVkRygPdNde-GCYR3Gc9zoFsftPToKB4mwu7Y/edit?usp=sharing).
