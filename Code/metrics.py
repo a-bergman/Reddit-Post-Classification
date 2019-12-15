@@ -143,6 +143,7 @@ def binary_classification_summary(y, y_predicted):
     sen = recall_score(y, y_predicted)
     spe = specificity(y, y_predicted)
     auc = roc_auc_score(y, y_predicted)
-    classification_summary = pd.DataFrame([acc, sen, spe, auc], index = ["Accuracy", "Sensitivity", "Specificity", "AUROC"], columns = ["Score"])
+    mcc = matthews_corrcoef(y, y_predicted)
+    classification_summary = pd.DataFrame([acc, sen, spe, mcc, auc], index = ["Accuracy", "Sensitivity", "Specificity", "AUROC", "Matthews Corr. Coef."], columns = ["Score"])
     return classification_summary
     
