@@ -502,7 +502,7 @@ def roc_curve(model_prob, X_test, y_test, y_predicted, title, dim, roc_color = "
     -------
     This code was modified from code written by Matt Brems during our lesson on classification metrics.
     """
-    model_prob = [i[0] for i in model_prob.predict_proba(X_test)]
+    model_prob = [i[1] for i in model_prob.predict_proba(X_test)]
     model_pred_df = pd.DataFrame({"true_values": y_test, "pred_probs": model_prob})
     thresholds = np.linspace(0, 1, 500) 
     def true_positive_rate(df, true_col, pred_prob_col, threshold):
