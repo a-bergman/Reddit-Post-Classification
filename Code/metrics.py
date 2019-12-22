@@ -3,8 +3,8 @@
 import pandas        as pd
 from math            import sqrt
 from sklearn.metrics import confusion_matrix, r2_score, recall_score
-from sklearn.metrics import f1_score, roc_auc_score, balanced_accuracy_score
-from sklearn.metrics import matthews_corrcoef, jaccard_score, accuracy_score
+from sklearn.metrics import roc_auc_score
+from sklearn.metrics import matthews_corrcoef, accuracy_score
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 """
@@ -104,7 +104,7 @@ def specificity(y, y_predicted):
     The specificity score: a floating point number between 0 and 1
     """
     cm = confusion_matrix(y, y_predicted)  
-    specificity = cm[0,0] / (cm[0,0] + cm[0,1])
+    specificity = cm[0,0] / (cm[0,0] + cm[1,0])
     return specificity
 
 def ternary_specificity(y, y_predicted):
@@ -129,14 +129,6 @@ def ternary_specificity(y, y_predicted):
     s3 = cm[2,2] / (cm[0,2] + cm[1,2] + cm[2,2])
     specificity = (s1 + s2 + s3) / 3
     return specificity
-
-def ternary_classification_summary(y, y_predicted):
-    bal_acc = balanced_accuracy_score(y, y_predicted)
-    spec    = ternary_specificity(y, y_predicted)
-    mcc     = matthews_corrcoef(y, y_predicted)
-    jcs     = jaccard_score(y, y_predicted, average = "macro")
-    classification_summary = pd.DataFrame([bal_acc, spec, mcc, jcs], index = ["Balanced Accuracy", "Specificity", "Matthews Corr. Coef.", "Jaccard Score"], columns = ["Score"])
-    return classification_summary
 
 def binary_classification_summary(y, y_predicted):
     acc = accuracy_score(y, y_predicted)
